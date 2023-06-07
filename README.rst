@@ -18,11 +18,13 @@ The 0.7.0 rewrite is now complete, see the `migration guide <https://tidalapi.ne
 Installation
 ------------
 
-Install from `PyPI <https://pypi.python.org/pypi/tidalapi/>`_ using ``pip``:
+Setup from source using 'git':
 
 .. code-block:: bash
 
-    $ pip install tidalapi
+    $ git clone https://github.com/WilliamGuisan/python-tidal
+    $ cd python-tidal
+    $ python setup.py build
 
 
 
@@ -30,7 +32,11 @@ Example usage
 -------------
 
 .. code-block:: python
-
+    
+    # If built from source:
+    import sys
+    sys.path.append("/path/to/directory/containing/tidalapi")
+    
     import tidalapi
 
     session = tidalapi.Session()
